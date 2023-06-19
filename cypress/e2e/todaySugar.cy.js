@@ -3,12 +3,8 @@ describe('계산기 앱 테스트', () => {
     cy.visit('../../index.html');
   })
 
-  it('디스플레이에 기본적으로 숫자 0이 표시된다.', () => {
-    cy.get('#total').should('have.text', 0);
-  });
+  it('디스플레이에 기본적으로 숫자 000이 표시된다.', () => {
+    cy.get('#number-display').invoke('text').should('eq', '000');
 
-  it('숫자 버튼을 클릭하면 display에 숫자가 표시된다.', () => {
-    cy.get(".digit").contains("1").click();
-    cy.get('#total').should('have.text', 1);
   });
 })
