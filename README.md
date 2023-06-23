@@ -5,7 +5,10 @@
 ## [🧨데모링크🧨](https://truthone.github.io/today-sugar/)
 
 ---
-## 1주차 미션: 핵심 기능 및 테스트 명세 
+## 1주차 미션: 핵심 기능 및 테스트 명세
+
+- proto 
+<img src="https://file.notion.so/f/s/ed0b5537-3ded-4cbb-99f2-4a5abcdcfc8f/Untitled.png?id=ced47843-fa41-46cb-8f18-e7fa8315d2de&table=block&spaceId=9d7f77b9-5b66-4153-b88c-edecfb1fb153&expirationTimestamp=1687576085862&signature=wCke5AcgIORI2_1qyghjC0725Kc0hRhEK91CUj9Tjn8&downloadName=Untitled.png" width="300px"></img>
 ```
 1. 사이드 프로젝트: 하루슈가
 
