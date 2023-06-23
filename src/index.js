@@ -1,8 +1,8 @@
-var numberDisplay = document.getElementById('number-display');
-var number = 0;
+let numberDisplay = document.getElementById('number-display');
+let number = 0;
 
 function increaseNumber(increment) {
-  var newNumber = number + increment;
+  let newNumber = number + increment;
   console.log(newNumber);
   if (newNumber <= 999) {
     number = newNumber;
@@ -14,7 +14,7 @@ function increaseNumber(increment) {
 }
 
 function decreaseNumber(decrement) {
-  var newNumber = number - decrement;
+  let newNumber = number - decrement;
   if (newNumber >= 0) {
     number = newNumber;
   } else if (newNumber < 0) {
