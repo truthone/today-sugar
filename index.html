@@ -1,67 +1,62 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>증감 버튼</title>
-		<style>
-			div {
-				margin: 20px;
-			}
-			.container {
-				text-align: center;
-				margin-top: 50px;
-			}
-			.number-display {
-				font-size: 24px;
-				margin-bottom: 20px;
-			}
-			.button {
-				display: inline-block;
-				padding: 10px 20px;
-				margin: 10px;
-				font-size: 18px;
-				cursor: pointer;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="number-display" id="number-display">000</div>
+  <head>
+    <title>하루슈가: 오늘 하루 먹은 설탕량을 기록해보세요</title>
+    <link rel="stylesheet" href="./src/css/index.css" type="text/css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>🥞하루슈가 today-sugar🥞</h1>
+      <div class="container">
+        <p>
+          오늘 하루 섭취한 당을 기록해보세요!<br />생각보다 많은 양에
+          놀라실거에요.
+        </p>
+        <p>하루 성인 당 권장 섭취량은 25g 입니다.</p>
+      </div>
+			<div class="container">
+      <div id="display">
+        <span class="number-display" id="number-display">000</span>
+        <span class="number-display">g</span>
+      </div>
+      <div id="buttons">
+        <div>
+          <button class="button decrease" onclick="decreaseNumber(1)">
+            -1
+          </button>
+          <button class="button increase" onclick="increaseNumber(1)">
+            +1
+          </button>
+        </div>
+        <div>
+          <button class="button decrease" onclick="decreaseNumber(5)">
+            -5
+          </button>
+          <button class="button increase" onclick="increaseNumber(5)">
+            +5
+          </button>
+        </div>
+        <div>
+          <button class="button decrease" onclick="decreaseNumber(10)">
+            -10
+          </button>
+          <button class="button increase" onclick="increaseNumber(10)">
+            +10
+          </button>
+        </div>
+        <div>
+          <button class="button decrease" onclick="decreaseNumber(30)">
+            -30
+          </button>
+          <button class="button increase" onclick="increaseNumber(30)">
+            +30
+          </button>
+        </div>
+        <button class="button reset" onclick="resetNumber()">Reset</button>
+      </div>
 			<div>
-				<div>
-					<button class="button decrease" onclick="decreaseNumber(1)">
-						-1
-					</button>
-					<button class="button increase" onclick="increaseNumber(1)">
-						+1
-					</button>
-				</div>
-				<div>
-					<button class="button decrease" onclick="decreaseNumber(5)">
-						-5
-					</button>
-					<button class="button increase" onclick="increaseNumber(5)">
-						+5
-					</button>
-				</div>
-				<div>
-					<button class="button decrease" onclick="decreaseNumber(10)">
-						-10
-					</button>
-					<button class="button increase" onclick="increaseNumber(10)">
-						+10
-					</button>
-				</div>
-				<div>
-					<button class="button decrease" onclick="decreaseNumber(30)">
-						-30
-					</button>
-					<button class="button increase" onclick="increaseNumber(30)">
-						+30
-					</button>
-				</div>
-				<button class="button reset" onclick="resetNumber()">Reset</button>
-			</div>
-		</div>
-		<script type="text/javascript" src="./src/index.js"></script>
-	</body>
+
+    </div>
+    <script type="text/javascript" src="./src/index.js"></script>
+  </body>
 </html>
