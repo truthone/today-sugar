@@ -1,4 +1,4 @@
-# today-surgar
+# today-sugar
 
 - 처음 접해보는 TDD, Cypress를 익히고자 진행한 프로젝트입니다.
 - 소개 및 기능
