@@ -2,60 +2,79 @@
 <html>
   <head>
     <title>하루슈가: 오늘 하루 먹은 설탕량을 기록해보세요</title>
+    <link rel="stylesheet" href="./src/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="./src/css/index.css" type="text/css" />
   </head>
   <body>
+    <h1>🥞하루슈가 today-sugar🥞</h1>
     <div id="app">
-      <h1>🥞하루슈가 today-sugar🥞</h1>
-      <div class="container">
-        <p>
-          오늘 하루 섭취한 당을 기록해보세요!<br />생각보다 많은 양에
-          놀라실거에요.
-        </p>
-        <p>하루 성인 당 권장 섭취량은 25g 입니다.</p>
+      <div>
+        <div class="container" id="intro">
+          <p>
+            오늘 하루 섭취한 당을 기록해보세요!<br />생각보다 많은 양에 놀라실
+            거예요.
+          </p>
+          <p>하루 성인 권장 섭취량은 25g입니다.</p>
+        </div>
+        <div class="container" id="info">
+          설탕량을 입력하시고<br />버튼을 클릭해주세요!
+          <button id="calculateButton" onclick="handleCalculate()">계산</button>
+        </div>
+        <div class="container" id="result">
+          <div>하루 권장량 대비 섭취량 (%)</div>
+          <div>
+            <span id="percentResult">0</span>
+            <span>%</span>
+          </div>
+          <div>
+            <div>각설탕 개수로</div>
+            <span id="sugarCubeResult">0</span>
+            <span>개!</span>
+          </div>
+        </div>
       </div>
-			<div class="container">
-      <div id="display">
-        <span class="number-display" id="number-display">000</span>
-        <span class="number-display">g</span>
-      </div>
-      <div id="buttons">
-        <div>
-          <button class="button decrease" onclick="decreaseNumber(1)">
-            -1
-          </button>
-          <button class="button increase" onclick="increaseNumber(1)">
-            +1
-          </button>
-        </div>
-        <div>
-          <button class="button decrease" onclick="decreaseNumber(5)">
-            -5
-          </button>
-          <button class="button increase" onclick="increaseNumber(5)">
-            +5
-          </button>
-        </div>
-        <div>
-          <button class="button decrease" onclick="decreaseNumber(10)">
-            -10
-          </button>
-          <button class="button increase" onclick="increaseNumber(10)">
-            +10
-          </button>
-        </div>
-        <div>
-          <button class="button decrease" onclick="decreaseNumber(30)">
-            -30
-          </button>
-          <button class="button increase" onclick="increaseNumber(30)">
-            +30
-          </button>
-        </div>
-        <button class="button reset" onclick="resetNumber()">Reset</button>
-      </div>
-			<div>
 
+      <div class="container">
+        <div id="display">
+          <span class="number-display" id="number-display">000</span>
+          <span class="number-display">g</span>
+        </div>
+        <div id="numberButtons">
+          <button class="button reset" onclick="resetNumber()">Reset</button>
+          <div class="buttonSet">
+            <button class="button decrease" onclick="decreaseNumber(1)">
+              -1
+            </button>
+            <button class="button increase" onclick="increaseNumber(1)">
+              +1
+            </button>
+          </div>
+          <div class="buttonSet">
+            <button class="button decrease" onclick="decreaseNumber(5)">
+              -5
+            </button>
+            <button class="button increase" onclick="increaseNumber(5)">
+              +5
+            </button>
+          </div>
+          <div class="buttonSet">
+            <button class="button decrease" onclick="decreaseNumber(10)">
+              -10
+            </button>
+            <button class="button increase" onclick="increaseNumber(10)">
+              +10
+            </button>
+          </div>
+          <div class="buttonSet">
+            <button class="button decrease" onclick="decreaseNumber(30)">
+              -30
+            </button>
+            <button class="button increase" onclick="increaseNumber(30)">
+              +30
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="./src/index.js"></script>
   </body>

@@ -1,9 +1,12 @@
-let numberDisplay = document.getElementById('number-display');
+const numberDisplay = document.getElementById('number-display');
 let number = 0;
+
+window.addEventListener('load', () => {
+  handleClickNumber();
+});
 
 function increaseNumber(increment) {
   let newNumber = number + increment;
-  console.log(newNumber);
   if (newNumber <= 999) {
     number = newNumber;
     numberDisplay.textContent = number;
@@ -26,4 +29,38 @@ function decreaseNumber(decrement) {
 function resetNumber() {
   number = 0;
   numberDisplay.textContent = number.toString().padStart(3, '0');
+}
+
+function handleCalculate() {
+  const percentResult = calculateToPercent();
+  const sugarCubeResult = calculateToSugarCube();
+  document.getElementById('percentResult').textContent = percentResult;
+  document.getElementById('sugarCubeResult').textContent = sugarCubeResult;
+  document.getElementById('info').style.display = 'none';
+  document.getElementById('result').style.display = 'flex';
+}
+
+function calculateToPercent() {
+  const inputNum = Number(
+    document.getElementById('number-display').textContent
+  );
+  const recommendGram = 25;
+  const result = Math.round((Number(inputNum) / Number(recommendGram)) * 100);
+  return result;
+}
+
+function calculateToSugarCube() {
+  const inputNum = Number(
+    document.getElementById('number-display').textContent
+  );
+  const standardNum = 3;
+  const result = Math.round(Number(inputNum) / Number(standardNum));
+  return result;
+}
+
+function handleClickNumber() {
+  document.getElementById('numberButtons').addEventListener('click', (e) => {
+    document.getElementById('info').style.display = 'flex';
+    document.getElementById('result').style.display = 'none';
+  });
 }
