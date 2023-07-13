@@ -85,3 +85,41 @@ button {
   font-weight: bold;
   color: rgb(255, 86, 218);
 }
+
+table {
+  display: blocks;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background-color: antiquewhite;
+}
+
+td {
+  border-top: 1px solid black;
+}
+
+.scroll {
+  height: 500px;
+  overflow-y: scroll;
+  margin: 50px 0;
+  border: 3px dotted rgb(255, 221, 0);
+  border-radius: 10px;
+}
+
+.cell-sugar {
+  background-color: #faebd771;
+}

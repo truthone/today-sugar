@@ -17,7 +17,173 @@
           <p>하루 성인 권장 섭취량은 25g입니다.</p>
         </div>
         <div class="container" id="info">
-          설탕량을 입력하시고<br />버튼을 클릭해주세요!
+          <div class="scroll">
+            <table>
+              <thead>
+                <th>식품종류</th>
+                <th>식품명</th>
+                <th>
+                  1회 <br />
+                  제공 단위
+                </th>
+                <th>
+                  1회 <br />
+                  제공량 (1인분)
+                </th>
+                <th>
+                  1회 제공 <br />
+                  설탕량(g)
+                </th>
+                <th>총 칼로리 (kcal)</th>
+              </thead>
+              <tr>
+                <td>음료류</td>
+                <td>코카콜라</td>
+                <td>1캔</td>
+                <td>355ml</td>
+                <td class="cell-sugar">39</td>
+                <td>160</td>
+              </tr>
+              <tr>
+                <td>식사류</td>
+                <td>마라탕</td>
+                <td>1인분</td>
+                <td>206g<br />(2인분, 512g)</td>
+                <td class="cell-sugar">2.3</td>
+                <td>469</td>
+              </tr>
+              <tr>
+                <td>과자류</td>
+                <td>
+                  서브웨이<br />
+                  초코칩 쿠키
+                </td>
+                <td>1개</td>
+                <td>45g</td>
+                <td class="cell-sugar">19.3</td>
+                <td>228</td>
+              </tr>
+              <tr>
+                <td>음료류</td>
+                <td>
+                  컴포즈커피<br />
+                  벨지움 생초콜릿라떼
+                </td>
+                <td>1잔</td>
+                <td>567ml</td>
+                <td class="cell-sugar">35</td>
+                <td>506</td>
+              </tr>
+              <tr>
+                <td>음료류</td>
+                <td>
+                  메가커피<br />
+                  아이스티
+                </td>
+                <td>1잔</td>
+                <td>710ml</td>
+                <td class="cell-sugar">62.6</td>
+                <td>297</td>
+              </tr>
+              <tr>
+                <td>캔디류</td>
+                <td>
+                  가나<br />
+                  마일드 초콜릿
+                </td>
+                <td>1개</td>
+                <td>34g</td>
+                <td class="cell-sugar">17</td>
+                <td>190</td>
+              </tr>
+              <tr>
+                <td>과자류</td>
+                <td>빈츠</td>
+                <td>1개</td>
+                <td>8.5g</td>
+                <td class="cell-sugar">3</td>
+                <td>45</td>
+              </tr>
+              <tr>
+                <td>과자류</td>
+                <td>오뜨 쇼콜라</td>
+                <td>1개</td>
+                <td>25g</td>
+                <td class="cell-sugar">8</td>
+                <td>123</td>
+              </tr>
+              <tr>
+                <td>음료류</td>
+                <td>
+                  할리스 <br />
+                  아이스 바닐라딜라이트
+                </td>
+                <td>Regular 1잔</td>
+                <td>355ml (Regular)</td>
+                <td class="cell-sugar">24</td>
+                <td>245</td>
+              </tr>
+              <tr>
+                <td>과채류</td>
+                <td>망고</td>
+                <td>1개</td>
+                <td>-</td>
+                <td class="cell-sugar">30.6</td>
+                <td>135</td>
+              </tr>
+              <tr>
+                <td>과채류</td>
+                <td>수박</td>
+                <td>10조각 (작은 공모양)</td>
+                <td>-</td>
+                <td class="cell-sugar">7.6</td>
+                <td>37</td>
+              </tr>
+              <tr>
+                <td>아이스크림류</td>
+                <td>
+                  베스킨라빈스<br />
+                  민트초코칩
+                </td>
+                <td>싱글 레귤러 1컵</td>
+                <td>115g</td>
+                <td class="cell-sugar">23</td>
+                <td>259</td>
+              </tr>
+              <tr>
+                <td>커피믹스류</td>
+                <td>
+                  맥심 <br />
+                  화이트골드 커피믹스
+                </td>
+                <td>1포</td>
+                <td>11.7g</td>
+                <td class="cell-sugar">5.5</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>음료류</td>
+                <td>몬스터 에너지</td>
+                <td>1캔</td>
+                <td>335ml</td>
+                <td class="cell-sugar">41</td>
+                <td>180</td>
+              </tr>
+              <tr>
+                <td>음료류</td>
+                <td>
+                  미닛메이드 <br />
+                  오렌지쥬스
+                </td>
+                <td>약 종이컵 1잔</td>
+                <td>175ml</td>
+                <td class="cell-sugar">13</td>
+                <td>64</td>
+              </tr>
+            </table>
+          </div>
+          설탕량을 입력하시고<br />
+          버튼을 클릭해주세요!
           <button id="calculateButton" onclick="handleCalculate()">계산</button>
         </div>
         <div class="container" id="result">
