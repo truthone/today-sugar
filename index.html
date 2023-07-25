@@ -16,9 +16,13 @@
           </p>
           <p>하루 성인 권장 섭취량은 25g입니다.</p>
         </div>
-        <div class="container" id="info">
+        <div class="container" id="table">
+          <p>
+            테이블의 행을 클릭해보세요!😎<br />
+            해당 식품의 설탕량이 입력돼요!🤗
+          </p>
           <div class="scroll">
-            <table>
+            <table id="infoTable">
               <thead>
                 <th>식품종류</th>
                 <th>식품명</th>
@@ -185,20 +189,36 @@
           <a href="https://www.fatsecret.kr/칼로리-영양소" target="_blank"
             >출처: fatsecret.kr</a
           >
-          설탕량을 입력하시고<br />
-          버튼을 클릭해주세요!
-          <button id="calculateButton" onclick="handleCalculate()">계산</button>
         </div>
-        <div class="container" id="result">
-          <div>하루 권장량 대비 섭취량 (%)</div>
-          <div>
-            <span id="percentResult">0</span>
-            <span>%</span>
+        <div class="container flexRow" id="info">
+          <div class="container" id="result">
+            <div>하루 권장량 대비 섭취량 (%)</div>
+            <div>
+              <span id="percentResult">0</span>
+              <span>%</span>
+            </div>
+            <div>
+              <div>각설탕 개수로</div>
+              <span id="sugarCubeResult">0</span>
+              <span>개!</span>
+            </div>
           </div>
-          <div>
-            <div>각설탕 개수로</div>
-            <span id="sugarCubeResult">0</span>
-            <span>개!</span>
+          <div class="container" id="selectedInfo">
+            클릭한 식품 정보가 기록됩니다.
+          </div>
+          <div id="notice-calculate">
+            설탕량을 입력하시고<br />
+            버튼을 클릭해주세요!
+            <button id="calculateButton" onclick="handleCalculate()">
+              계산
+            </button>
+          </div>
+          <div id="notice-back">
+            다시 계산하고 싶으시면 <br />
+            아래 '다시' 버튼을 눌러주세요!
+            <button id="calculateButton" onclick="handleCalculate()">
+              계산
+            </button>
           </div>
         </div>
       </div>

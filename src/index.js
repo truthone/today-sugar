@@ -2,8 +2,33 @@ const numberDisplay = document.getElementById('number-display');
 let number = 0;
 
 window.addEventListener('load', () => {
+  handleClickTableRow();
   handleClickNumber();
 });
+
+function handleClickTableRow() {
+  document.querySelector('#infoTable').addEventListener('click', (event) => {
+    const clickedElement = event.target;
+    if (clickedElement.tagName === 'TD') {
+      const clickedRow = clickedElement.parentNode;
+
+      //1회제공량 cell은 5번째 column이다.
+      const sugarPerOnce = Math.round(Number(clickedRow.cells[4].textContent));
+      const selectedInfoName = clickedRow.cells[1].textContent;
+
+      // 소숫점 반올림하여 정수값으로 입력한다.
+      increaseNumber(sugarPerOnce);
+      handleSelectedInfo(selectedInfoName);
+    }
+  });
+}
+
+function handleSelectedInfo(selectedInfoName) {
+  const newElement = document.createElement('div');
+
+  newElement.innerHTML = '✨' + selectedInfoName;
+  document.querySelector('#selectedInfo').appendChild(newElement);
+}
 
 function increaseNumber(increment) {
   let newNumber = number + increment;
@@ -36,8 +61,9 @@ function handleCalculate() {
   const sugarCubeResult = calculateToSugarCube();
   document.getElementById('percentResult').textContent = percentResult;
   document.getElementById('sugarCubeResult').textContent = sugarCubeResult;
-  document.getElementById('info').style.display = 'none';
+  // document.getElementById('info').style.display = 'none';
   document.getElementById('result').style.display = 'flex';
+  document.getElementById('notice-back').style.display = 'flex';
 }
 
 function calculateToPercent() {

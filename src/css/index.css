@@ -106,16 +106,23 @@ td {
 
 th {
   background-color: antiquewhite;
+  font-size: 25px;
 }
 
 td {
   border-top: 1px solid black;
 }
 
+tr:hover {
+  background-color: #f8ea7d6f;
+  cursor: pointer;
+  padding: 25px;
+}
+
 .scroll {
   height: 500px;
   overflow-y: scroll;
-  margin-top: 50px;
+  margin-top: 25px;
   border: 3px dotted rgb(255, 221, 0);
   border-radius: 10px;
 }
@@ -125,10 +132,28 @@ td {
 }
 
 a {
-  display: block;
-  width: 100%;
+  width: fit-content;
+  padding: 0 2rem;
   text-align: start;
   font-size: 20px;
   font-weight: 100;
   color: rgb(67, 67, 67);
+}
+
+.flexRow {
+  flex-direction: row;
+}
+
+#table > p {
+  font-weight: 100;
+  color: gray;
+  text-align: start;
+}
+
+#notice-back {
+  display: none;
+}
+
+#selectedInfo {
+  max-width: 50%;
 }
